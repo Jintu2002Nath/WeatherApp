@@ -1,0 +1,802 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+
+
+
+
+
+.wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  
+   
+}
+
+
+.back-video
+{
+
+
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -3;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+
+
+h1{
+
+
+    text-align: center;
+    font-size: 2.4rem;
+    padding: 20px;
+
+
+
+}
+
+
+
+
+
+
+.tab{
+    padding-block: 8px;
+    cursor:pointer;
+    font-size: 85%;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+    width:10%;
+    min-width: 100px;
+    text-align: center;
+    color:rgb(225, 25, 209);
+
+
+}
+
+
+
+
+.tab.current-tab
+{
+
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255,0.8);
+    transform: scale(1.1);
+    border-radius: 3px;
+    
+}
+
+
+
+
+.tab-container
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30%
+    
+}
+
+
+.second-container
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5%;
+
+    height: 80%;
+    width: 100%;
+   
+}
+
+
+.Grant-location
+{
+
+    border: 2px solid red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width:50%;
+    position: absolute;
+
+    top: 35%;
+
+    font-size: 1.5rem;   
+    font-weight: 600;
+    transform: scale(0);
+ 
+   
+}
+
+
+
+
+
+
+.Grant-location.active
+{
+  transform: scale(1);
+
+
+}
+
+
+
+.access
+{
+    color:rgb(5, 16, 66);
+
+    width:30%;
+    height:10%;
+
+    margin:15px;
+    padding:8px;
+    border-radius: 8px;
+
+    font-size: 1.1rem;
+    color: rgb(2, 23, 140);
+
+}
+
+
+
+.loading
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.5rem;
+
+    transform: scale(0);
+
+}
+
+.loading p
+{
+
+    font-size: 2rem;
+    color: rgb(228, 234, 63);
+}
+
+.loading.active
+{
+
+    transform: scale(1);
+
+
+}
+
+
+
+.weather-info
+{
+
+    display:none;
+    flex-direction: column;
+
+    gap: 0;
+
+    margin-top: -16%;
+
+    width: 100%;
+
+
+   
+  
+
+
+}
+
+
+.weather-info h2
+{
+
+    font-size:2.3rem;
+    
+
+  
+
+}
+
+
+.name
+{
+
+    display: flex;
+    gap:0.8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 8px;
+    margin-top: 1.5rem;
+    
+}
+
+
+.name img
+{
+    width:30px;
+    height:25px;
+
+
+}
+
+.weather-info [weather-desc]
+{
+
+    font-size: 2.5rem;
+    color: rgb(233, 50, 239);
+    text-align: center;
+    font-weight: 500;
+    /* margin-top: 1rem; */
+   
+
+}
+
+.weather-info [weather-icon]
+{
+
+    width: 90px;
+    height: 90px;
+
+    margin: -15px auto;
+
+    
+
+
+}
+
+.weather-info [temperature]
+{
+    text-align: center;
+    
+    font-size: 2.2rem;
+    font-weight: 650;
+
+
+}
+
+
+.cards
+{
+
+   
+    display: flex;
+     gap:2rem;
+   
+ justify-content: center;
+    margin:0.8rem auto;
+
+   width:100%;
+   height: 50%;
+
+
+
+
+
+
+}
+
+
+[temp-parameter]
+{
+
+    display: flex;
+    flex-direction: column;
+ 
+    
+    background-color: rgba(219, 226, 239, 0.5);
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+
+    gap: 1rem;
+    width: 20%;
+    padding: 20px;
+ 
+
+}
+
+
+[temp-parameter] img
+
+{
+
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+    margin-top: -1rem;
+
+
+    
+
+}
+
+
+[temp-parameter] p
+{
+
+    font-size:1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: rgb(216, 250, 250);
+    font-weight: 500;
+}
+
+
+[temp-parameter] span
+
+{
+
+
+    font-size: 2em;
+    color: cyan;
+}
+
+
+.active
+{
+
+    display: flex;
+
+}
+
+
+
+.form
+{
+ 
+    display:none;
+    justify-content: center;
+    align-items: center;
+    gap:0 10px;
+    margin-top: 1.5rem ;
+
+    
+}
+
+.form input
+{
+
+
+    all: unset;
+    height: 30px;
+    width: 40%;
+    font-size: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+
+    padding-block: 0.3rem;
+    padding-left: 1.5rem;
+
+
+}
+
+.form input::placeholder
+{
+
+    color: rgba(28, 232, 236, 0.8);
+
+}
+
+
+.form input:focus
+{
+
+ outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+
+
+.btn
+{
+
+        all: unset;
+        
+        width: 50px;
+       
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        margin-bottom:1px;
+        background-color: rgba(145, 228, 228, 0.848);
+        cursor: pointer;
+border-radius: 5px;
+
+}
+
+
+
+.form.active
+{
+
+    display: flex;
+}
+
+
+
+/* media for forms container */
+
+
+    @media(max-width:550px) {
+
+        .form input{
+
+
+            font-size: 1.2rem;
+
+
+        }
+
+
+
+    }
+    @media(max-width:435px) {
+
+        .form input{
+
+
+            font-size: 1em;
+
+
+        }
+
+
+
+    }
+    @media(max-width:365px) {
+
+        .form input{
+
+
+            font-size: 1em;
+            width: 53%;
+
+            padding:5px
+
+
+        }
+
+
+
+    }
+
+
+/* media for weather container */
+
+
+
+
+@media(max-width:1000px) {
+    
+    .weather-info
+    {
+
+        margin-top: -20%;
+       
+      
+       
+    }
+
+}
+@media(max-width:500px) {
+    
+    .second-container
+    {
+
+        margin-top: -15%;
+    }
+
+}
+@media(max-width:380px) {
+    
+    .second-container
+    {
+
+        margin-top: -20%;
+    }
+
+}
+
+@media(max-width:720px) {
+
+
+
+    .weather-info
+    {
+
+        margin-top: -45%;
+  
+       
+       
+    }
+
+
+    [temp-parameter] p
+    {
+
+        font-size: 1.1rem;
+    }
+
+
+    [temp-parameter]
+    {
+
+
+        width: 27%;
+    }
+    [temp-parameter] span
+    {
+
+
+       font-size: 1.5rem;
+    }
+    
+}
+
+
+
+/* media for grant location */
+
+
+
+
+
+
+@media(width<=880px) {
+    .Grant-location
+    {
+
+
+        width:90%;
+
+        font-size: 1.5rem;
+    }
+    
+}
+@media(width<=480px) {
+    .Grant-location
+    {
+
+
+        width:95%;
+        font-size: 1.3rem;
+
+        gap:1.5rem;
+    }
+
+    .access
+    {
+
+        font-size: 1rem;
+        padding: 10x;
+        min-width: 35%;
+    }
+    
+}
+
+
+@media(width<=380px) {
+    .Grant-location
+    {
+
+        font-size: 1.01rem;
+        width: 100%;
+
+        gap:2rem;
+
+    }
+}
+
+
+
+
+
+.error
+{
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+  
+margin-top: -14%;
+
+    gap:0.2rem;
+
+
+
+  
+
+
+}
+
+
+.error img
+{
+
+
+    margin-bottom: -10%;
+    margin-top: -13%;
+}
+
+
+.error.active
+{
+
+    display: flex;
+}
+
+
+
+
+.error p:first-of-type
+{
+
+
+    font-size:2rem;
+    padding: 10px;
+
+    color: yellow;
+}
+
+
+
+.try
+{
+
+    font-size: 1.7rem;
+
+    color: aqua;
+}
+
+.thank
+{
+
+    font-size: 2.2rem;
+    color: rgb(208, 0, 255);
+    
+}
+
+
+
+@media(width<=977px) {
+
+    .error{
+
+        width:70%;
+        margin-top: -22%;
+    }
+
+
+    
+}
+@media(width<=687px) {
+
+    .error{
+
+        width:90%;
+
+      
+        margin-top: -27%;
+    }
+
+    .error p:first-of-type
+    {
+
+        font-size: 1.3rem;
+    }
+    
+    .error img
+    {
+       
+        width: 330px;
+        height: 300px;;
+    
+    }
+    
+ 
+}
+@media(width<=536px) {
+
+    .error{
+
+        width:95%;
+
+        margin-top: -30%;
+       
+       
+    }
+
+}
+
+@media(width<=339px) {
+
+    .error{
+
+        width:99%;
+      margin-top: -40%;
+       
+       
+    }
+
+
+
+    .try
+    {
+    
+        font-size: 1.1rem;
+    
+   
+    }
+    
+    .thank
+    {
+    
+        font-size: 1.4rem;
+       
+        
+    }
+
+
+  .error img
+{
+   
+    width: 250px;
+    height: 250px;;
+
+}
+
+.error p:first-of-type
+    {
+
+        font-size: 1.11rem;
+    }
+}
+
+
+
+
+/* media query for search bar */
+
+
+
